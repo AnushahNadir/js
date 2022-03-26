@@ -5,3 +5,8 @@
 //     })
 // console.log(api, "API")
 
+async function fetchAPI(){
+    console.log("Fetch API")
+    const api = await fetch('https://jsonplaceholder.typicode.com/todos/1')
+    
+}
