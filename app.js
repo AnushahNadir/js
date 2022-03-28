@@ -17,6 +17,7 @@
 
 //getAPI();
 
+
 async function postapi(){
     const api = await fetch('https://jsonplaceholder.typicode.com/posts',{
         method: 'POST',
@@ -35,3 +36,20 @@ async function postapi(){
     console.log(json, "json")
 }
 postapi();
+
+async function postapi(){
+    const api = await fetch('',{
+        method:'POST',
+        body: JSON.stringify({
+            title: 'bootcamp',
+            body: 'bar',
+            userId: 1
+        }),
+        headers: {
+            'Content-type': 'application/json; charser=UTF-8'
+        } 
+    })
+    console.log(api, "API")
+    const json = await api.json()
+    console.log(json, "JSON")
+}
